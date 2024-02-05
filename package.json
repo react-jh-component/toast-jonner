@@ -1,0 +1,53 @@
+{
+  "name": "jonner",
+  "version": "1.0.0",
+  "description": "toast for React",
+  "main": "index.js",
+  "license": "MIT",
+  "exports": {
+    "types": "./dist/index.d.ts",
+    "import": "./dist/index.mjs",
+    "require": "./dist/index.js"
+  },
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup src/index.tsx",
+    "dev": "tsup src/index.tsx --watch",
+    "dev:website": "turbo run dev --filter=website...",
+    "dev:test": "turbo run dev --filter=test...",
+    "format": "prettier --write .",
+    "test": "playwright test"
+  },
+  "keywords": [
+    "react",
+    "notifications",
+    "toast",
+    "snackbar",
+    "message"
+  ],
+  "author": "Jaeha Lee <wogkdkrm112@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jaehafe"
+  },
+  "bugs": {
+    "url": "https://github.com/jaehafe"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.16",
+    "@types/react": "^18.2.52",
+    "prettier": "^3.2.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "tsup": "^8.0.1",
+    "turbo": "^1.12.2",
+    "typescript": "^5.3.3"
+  },
+  "peerDependencies": {
+    "react": ">=18.x",
+    "react-dom": ">=18.x"
+  }
+}
